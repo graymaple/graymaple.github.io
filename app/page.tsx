@@ -1,3 +1,4 @@
+/* oxlint-disable next/no-html-link-for-pages -- GitHub Pages static export needs full-document navigation. */
 import {
   ArrowRight,
   Bot,
@@ -12,7 +13,6 @@ import {
   Workflow,
 } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ExternalLink, SiteFooter, SiteHeader } from '@/components/portfolio-chrome';
 import { Reveal } from '@/components/reveal';
 
@@ -92,15 +92,15 @@ export default function Home() {
                 <p><CheckCircle2 size={17} /> 程序控制校验、路由与质量门禁；LLM 专注证据综合</p>
               </div>
               <div className="project-links">
-                <Link className="text-link" href="/projects/amazon">阅读项目案例 <ArrowRight size={14} /></Link>
+                <a className="text-link" href="/projects/amazon/">阅读项目案例 <ArrowRight size={14} /></a>
                 <ExternalLink href={amazonRepo} subtle>查看源码</ExternalLink>
               </div>
             </div>
-            <Link className="project-visual architecture-frame visual-link" href="/projects/amazon" aria-label="阅读 Amazon US Operations Agent 项目案例">
+            <a className="project-visual architecture-frame visual-link" href="/projects/amazon/" aria-label="阅读 Amazon US Operations Agent 项目案例">
               <div className="visual-bar"><span><i /> architecture.html</span><span>CASE STUDY →</span></div>
               <Image src="/amazon-architecture.png" alt="Amazon 运营 Agent 系统架构图预览" width={1440} height={900} sizes="(max-width: 900px) 100vw, 56vw" priority />
               <div className="visual-note"><Network size={16} /> 架构、请求生命周期与五项业务工作流</div>
-            </Link>
+            </a>
           </article>
         </Reveal>
 
@@ -122,11 +122,11 @@ export default function Home() {
               </div>
               <p className="metric-note">* 来自仓库演示黄金集的回归基线，不代表生产环境效果。</p>
               <div className="project-links">
-                <Link className="text-link" href="/projects/feishu">阅读项目案例 <ArrowRight size={14} /></Link>
+                <a className="text-link" href="/projects/feishu/">阅读项目案例 <ArrowRight size={14} /></a>
                 <ExternalLink href={feishuRepo} subtle>查看源码</ExternalLink>
               </div>
             </div>
-            <Link className="project-visual flow-frame visual-link" href="/projects/feishu" aria-label="阅读飞书 RAG 客服 Agent 项目案例">
+            <a className="project-visual flow-frame visual-link" href="/projects/feishu/" aria-label="阅读飞书 RAG 客服 Agent 项目案例">
               <div className="visual-bar"><span><i /> live_request.trace</span><span>CASE STUDY →</span></div>
               <div className="flow-diagram">
                 {flow.map(([n, title, tag], index) => (
@@ -137,7 +137,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="trace-footer"><span><i /> request_id: demo_0827</span><b>COMPLETED · TRACEABLE</b></div>
-            </Link>
+            </a>
           </article>
         </Reveal>
       </section>

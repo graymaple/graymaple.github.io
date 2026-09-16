@@ -1,6 +1,6 @@
+/* oxlint-disable next/no-html-link-for-pages -- GitHub Pages static export needs full-document navigation. */
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   ArrowLeft,
   ArrowRight,
@@ -15,7 +15,6 @@ import {
   Network,
   PackageSearch,
   ShieldCheck,
-  TriangleAlert,
 } from 'lucide-react';
 import { ExternalLink, SiteFooter, SiteHeader } from '@/components/portfolio-chrome';
 import { Reveal } from '@/components/reveal';
@@ -45,7 +44,7 @@ export default function FeishuProjectPage() {
 
       <section className="section case-hero">
         <div className="case-hero-copy">
-          <Link className="back-link" href="/#work"><ArrowLeft size={15} /> 返回项目列表</Link>
+          <a className="back-link" href="/#work"><ArrowLeft size={15} /> 返回项目列表</a>
           <p className="eyebrow">PROJECT 02 / INTELLIGENT CUSTOMER SERVICE</p>
           <h1>Feishu RAG<br /><span>Customer Service Agent</span></h1>
           <p className="case-lead">从飞书消息入口到交互式卡片输出，把混合检索、用户记忆、订单工具、Trace 和评测组织成一条可复跑的企业客服链路。</p>
@@ -159,19 +158,9 @@ export default function FeishuProjectPage() {
         </Reveal>
       </section>
 
-      <section className="section case-section limitations">
-        <Reveal>
-          <div className="case-section-head"><p className="eyebrow">06 / LIMITS & NEXT</p><h2>演示链路完整，不等于已经生产化</h2></div>
-          <div className="limits-grid">
-            <article><TriangleAlert /><h3>当前限制</h3><p>OMS 与订单均为模拟数据；黄金集规模较小；单机 SQLite 和内存状态不承担真实多租户服务承诺。</p></article>
-            <article><ArrowRight /><h3>生产化方向</h3><p>接入真实 OMS 的权限隔离与审计，增加人工转接队列、分布式持久化，并用真实失败样本持续扩展评测集。</p></article>
-          </div>
-        </Reveal>
-      </section>
-
       <section className="section next-project previous">
         <p className="eyebrow">PREVIOUS PROJECT / 01</p>
-        <Link href="/projects/amazon"><ArrowLeft /><span>Amazon US Operations Agent</span></Link>
+        <a href="/projects/amazon/"><ArrowLeft /><span>Amazon US Operations Agent</span></a>
       </section>
 
       <SiteFooter />

@@ -1,6 +1,6 @@
+/* oxlint-disable next/no-html-link-for-pages -- GitHub Pages static export needs full-document navigation. */
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   ArrowLeft,
   ArrowRight,
@@ -11,7 +11,6 @@ import {
   Gauge,
   GitBranch,
   ShieldCheck,
-  TriangleAlert,
   Workflow,
 } from 'lucide-react';
 import { ExternalLink, SiteFooter, SiteHeader } from '@/components/portfolio-chrome';
@@ -41,7 +40,7 @@ export default function AmazonProjectPage() {
 
       <section className="section case-hero">
         <div className="case-hero-copy">
-          <Link className="back-link" href="/#work"><ArrowLeft size={15} /> 返回项目列表</Link>
+          <a className="back-link" href="/#work"><ArrowLeft size={15} /> 返回项目列表</a>
           <p className="eyebrow">PROJECT 01 / CROSS-BORDER E-COMMERCE</p>
           <h1>Amazon US<br /><span>Operations Agent</span></h1>
           <p className="case-lead">把商品、竞品、关键词与 Listing 数据组织成五条可追踪的运营工作流；用程序控制取数、约束与质量门禁，让模型专注于证据解读和表达。</p>
@@ -194,19 +193,9 @@ export default function AmazonProjectPage() {
         </Reveal>
       </section>
 
-      <section className="section case-section limitations">
-        <Reveal>
-          <div className="case-section-head"><p className="eyebrow">06 / LIMITS & NEXT</p><h2>当前边界明确，生产化路线也明确</h2></div>
-          <div className="limits-grid">
-            <article><TriangleAlert /><h3>当前没有做</h3><p>接口鉴权、多租户、持久化会话、全站商品发现和自动发布均不在当前正式范围。</p></article>
-            <article><ArrowRight /><h3>下一步可扩展</h3><p>加入租户与权限模型、持久化 Checkpoint、更多数据 Provider，并把评测集扩展到真实运营复盘样本。</p></article>
-          </div>
-        </Reveal>
-      </section>
-
       <section className="section next-project">
         <p className="eyebrow">NEXT PROJECT / 02</p>
-        <Link href="/projects/feishu"><span>Feishu RAG Customer Service Agent</span><ArrowRight /></Link>
+        <a href="/projects/feishu/"><span>Feishu RAG Customer Service Agent</span><ArrowRight /></a>
       </section>
 
       <SiteFooter />

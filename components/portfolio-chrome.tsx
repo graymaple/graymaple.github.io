@@ -1,17 +1,17 @@
+/* oxlint-disable next/no-html-link-for-pages -- GitHub Pages static export needs full-document navigation. */
 import { ArrowUpRight, Code2 } from 'lucide-react';
-import Link from 'next/link';
 
 export function SiteHeader({ detail = false }: { detail?: boolean }) {
   return (
     <header className="site-header">
-      <Link className="brand" href="/#top" aria-label="返回作品集首页">
+      <a className="brand" href="/#top" aria-label="返回作品集首页">
         <span className="brand-mark">GM</span>
         <span>GRAYMAPLE / AI BUILDER</span>
-      </Link>
+      </a>
       <nav className="site-nav" aria-label="主导航">
-        <Link href="/#work">项目</Link>
-        {!detail && <Link href="/#approach">方法</Link>}
-        {!detail && <Link href="/#stack">技术栈</Link>}
+        <a href="/#work">项目</a>
+        {!detail && <a href="/#approach">方法</a>}
+        {!detail && <a href="/#stack">技术栈</a>}
         <a className="nav-github" href="https://github.com/graymaple" target="_blank" rel="noreferrer">
           <Code2 size={16} /> GitHub
         </a>
