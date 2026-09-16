@@ -17,6 +17,8 @@ import {
 import { ExternalLink, SiteFooter, SiteHeader } from '@/components/portfolio-chrome';
 import { Reveal } from '@/components/reveal';
 
+export const dynamic = 'force-static';
+
 const repo = 'https://github.com/graymaple/amazon-us-operations-agent';
 
 export const metadata: Metadata = {

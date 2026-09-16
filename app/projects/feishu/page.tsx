@@ -20,6 +20,8 @@ import {
 import { ExternalLink, SiteFooter, SiteHeader } from '@/components/portfolio-chrome';
 import { Reveal } from '@/components/reveal';
 
+export const dynamic = 'force-static';
+
 const repo = 'https://github.com/graymaple/feishu-rag-customer-service-agent';
 
 export const metadata: Metadata = {
