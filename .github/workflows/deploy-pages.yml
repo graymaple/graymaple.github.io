@@ -38,6 +38,17 @@ jobs:
       - name: Build static site
         run: pnpm run build
 
+      - name: Normalize project routes for GitHub Pages
+        shell: bash
+        run: |
+          for project in amazon feishu; do
+            source_file="dist/client/projects/${project}.html"
+            target_dir="dist/client/projects/${project}"
+            test -f "$source_file"
+            mkdir -p "$target_dir"
+            cp "$source_file" "$target_dir/index.html"
+          done
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
