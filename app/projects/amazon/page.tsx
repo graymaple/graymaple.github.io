@@ -45,7 +45,7 @@ export default function AmazonProjectPage() {
           <p className="case-lead">把商品、竞品、关键词与 Listing 数据组织成五条可追踪的运营工作流；用程序控制取数、约束与质量门禁，让模型专注于证据解读和表达。</p>
           <div className="case-actions">
             <ExternalLink href={repo}>GitHub 源码</ExternalLink>
-            <ExternalLink href={`${repo}/tree/main/docs/architecture`} subtle>交互式架构文档</ExternalLink>
+            <ExternalLink href="/amazon/interactive/system-architecture.html" subtle>交互式架构图</ExternalLink>
           </div>
         </div>
         <div className="case-stat-panel" aria-label="项目关键事实">
@@ -74,11 +74,26 @@ export default function AmazonProjectPage() {
           <div className="case-section-head split"><div><p className="eyebrow">02 / SYSTEM VIEW</p><h2>确定性骨架包住模型能力</h2></div><p>主链路不依赖无限 ReAct 循环。Workflow 决定需要哪些证据、调用顺序和停止条件；LLM 只在综合解读与文案表达阶段介入。</p></div>
         </Reveal>
         <Reveal delay={80}>
-          <figure className="case-figure">
-            <div className="visual-bar"><span><i /> system-architecture.png</span><span>REPOSITORY EVIDENCE</span></div>
-            <Image src="/amazon-architecture.png" alt="Amazon US Operations Agent 系统架构图" width={1440} height={900} sizes="(max-width: 900px) 100vw, 1120px" />
-            <figcaption>运营工作台 → FastAPI → 固定业务 Workflow → Tool Registry → 西柚 MCP / SQLite 缓存</figcaption>
-          </figure>
+          <div className="interactive-diagram-shell">
+            <div className="visual-bar"><span><i /> system-architecture.html</span><span>INTERACTIVE · ARCHIFY</span></div>
+            <iframe
+              className="interactive-diagram-frame"
+              src="/amazon/interactive/system-architecture.html"
+              title="Amazon US Operations Agent 可交互系统架构图"
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-downloads allow-popups"
+              allow="clipboard-write"
+              allowFullScreen
+            />
+            <div className="interactive-diagram-footer">
+              <p>可缩放、搜索节点、查看上下游关系并追踪有向路径；面试演示建议打开全屏版本。</p>
+              <div className="interactive-diagram-actions" aria-label="交互式架构资料">
+                <ExternalLink href="/amazon/interactive/system-architecture.html">全屏系统架构</ExternalLink>
+                <ExternalLink href="/amazon/interactive/request-lifecycle.html" subtle>请求生命周期</ExternalLink>
+                <ExternalLink href="/amazon/interactive/five-workflows.html" subtle>五条业务工作流</ExternalLink>
+              </div>
+            </div>
+          </div>
         </Reveal>
       </section>
 

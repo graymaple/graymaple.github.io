@@ -216,6 +216,11 @@ footer > div { display: flex; align-items: center; gap: 14px; }footer p { margin
 .case-figure img { display: block; width: 100%; height: auto; filter: saturate(.88) brightness(.9); transition: transform .55s ease, filter .35s ease; }
 .case-figure:hover img { transform: scale(1.008); filter: saturate(1) brightness(.96); }
 .case-figure figcaption { padding: 17px 18px; border-top: 1px solid var(--line); color: #718395; font: 10px/1.5 ui-monospace, monospace; }
+.interactive-diagram-shell { overflow: hidden; border: 1px solid var(--line); background: #091019; box-shadow: 0 28px 70px rgba(0,0,0,.18); }
+.interactive-diagram-frame { display: block; width: 100%; height: min(680px, 72vh); min-height: 540px; border: 0; background: #081018; }
+.interactive-diagram-footer { display: flex; justify-content: space-between; gap: 32px; align-items: center; padding: 20px 22px; border-top: 1px solid var(--line); }
+.interactive-diagram-footer > p { max-width: 520px; margin: 0; color: #7e91a3; font-size: 12px; line-height: 1.7; }
+.interactive-diagram-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; }
 
 .workflow-list { border-top: 1px solid var(--line); }
 .workflow-row { display: grid; grid-template-columns: 70px minmax(190px,.7fr) 1.3fr auto; gap: 26px; align-items: center; min-height: 118px; border-bottom: 1px solid var(--line); transition: background .2s ease, padding .25s ease; }
@@ -325,6 +330,7 @@ footer > div { display: flex; align-items: center; gap: 14px; }footer p { margin
   .case-triad article, .decision-grid article { min-height: 240px; padding: 28px; }
   .workflow-row { grid-template-columns: 42px 1fr auto; gap: 14px; padding: 24px 0; }.workflow-row:hover { padding: 24px 10px; }.workflow-row p { grid-column: 2 / -1; }.workflow-row > svg { grid-column: 3; grid-row: 1; }
   .evidence-layout { grid-template-columns: 1fr; }.media-placeholder { min-height: 170px; }
+  .interactive-diagram-frame { height: 520px; min-height: 0; }.interactive-diagram-footer { align-items: flex-start; flex-direction: column; }.interactive-diagram-actions { justify-content: flex-start; }
   .evidence-gallery { grid-template-columns: 1fr; }.rag-proof { grid-column: auto; }.evidence-media-card { grid-template-rows: 460px auto; }.rag-proof .evidence-media-frame img { object-fit: contain; }
   .amazon-workflow-gallery, .amazon-runtime-gallery { grid-template-columns: 1fr; }.amazon-workflow-gallery .amazon-proof-card:last-child { grid-column: auto; }.amazon-proof-card, .amazon-runtime-card { grid-template-rows: 310px auto; }
   .stage-grid { grid-template-columns: 1fr; }.stage-card { min-height: 210px; }
